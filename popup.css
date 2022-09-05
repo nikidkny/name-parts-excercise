@@ -1,0 +1,6 @@
+.pop-up {
+  display: none;
+}
+.pop-up.open {
+  display: block;
+}
