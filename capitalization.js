@@ -6,5 +6,7 @@ console.log(firstLetter);
 capitalise(name1);
 function capitalise(name1) {
   name1 = name1.charAt(0).toUpperCase() + name1.substring(1).toLowerCase();
-  console.log(`My name is ${name1}`);
+  return `My name is ${name1}`;
 }
+const cap = capitalise("niki");
+console.log(cap);

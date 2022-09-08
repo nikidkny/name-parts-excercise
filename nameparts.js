@@ -22,6 +22,12 @@ function getNameParts(fullName) {
   const firstName = fullName.substring(0, fullName.indexOf(" "));
   const middleName = fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "));
   const lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
+
+  // const firstName = capitalise(fullName.substring(0, fullName.indexOf(" ")));
+  // const middleName = capitalise(
+  //   fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "))
+  // );
+  // const lastName = capitalise(fullName.substring(fullName.lastIndexOf(" ") + 1));
   if (middleName == null) {
     console.log(firstName, lastName);
   } else {
@@ -39,10 +45,17 @@ fullName1("Potter", "Harry", "James"); //should console.log "Harry James Potter"
 // fullName1("Harry", "Potter"); should console.log "Potter Harry"
 // fullName1 ("Potter", "Harry", "James", "Pottypotpot");should console.log "Harry James Potter"
 function fullName1(lastName, firstName, middleName) {
-  fullName1 = firstName + " " + middleName + " " + lastName;
-  if (middleName == null) {
-    console.log(firstName, lastName);
+  if (middleName) {
+    // console.log(`${firstName} ${middleName} ${lastName}`);
+    //try returning it insted
+    return `${firstName} ${middleName} ${lastName}`;
   } else {
-    console.log(fullName1);
+    // console.log(`${firstName}  ${lastName}`);
+    //try returning it insted
+    return `${firstName}  ${lastName}`;
   }
 }
+
+// try for return
+console.log("fullName1 test 1: ", fullName1("Lind", "Peter"));
+console.log("fullName1 test 1: ", fullName1("Lind", "Peter", "Heronimous"));
